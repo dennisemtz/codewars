@@ -391,3 +391,114 @@ if then for loop
 
 
 
+// function past(h,m,s){
+//     let hours = h * 60 * 60 * 1000;
+//     let min = m * 60 * 1000;
+//     let sec = s * 1000
+
+//     return hours + min + sec
+
+// }
+
+
+// function sumArray(array){
+//     if(!array || array.length < 1){
+//         return 0
+//     }else{
+//         let sum = 0
+//     let sorted = array.sort((a,b)=>{
+//        return  a-b
+//     })
+
+//     for(let i = 1; i < sorted.length-1; i++){
+
+//         sum += sorted[i]
+
+//     }
+//     return sum
+
+//     }
+    
+  
+// }
+
+// console.log(sumArray([null]))
+
+
+
+// function monkeyCount(n){
+//     let arr=[]
+//     for(let i =1; i<=n; i++){
+//         arr.push(i)
+//     }
+//     return arr
+// }
+
+// console.log(monkeyCount(10))
+
+// function monkeyCount(n){
+//     return Array.from({length:n},(_,i)=>i+1)
+// }
+// console.log(monkeyCount(10))
+
+
+/*
+Array.from creates a new array from an iterable object
+
+- iterable is the {length:n}, then the created array will have length of n
+
+map function will be called on each item of the new created arrat (_,i) the _ item is ignored, but the new item if formed with index(i)
+
+
+
+
+
+*/
+
+// function remove(string){
+//      let array = string.split('')
+//    let filtered= array.filter(item=>{return item !== '!'})
+//    return filtered.join('') + '!'
+// }
+// console.log(remove('HI! HI!'))
+
+// function remove2(string) {
+//     //coding and coding....
+//   return string.split('!').join('') + "!"
+//   }
+//   console.log(remove2('HI! HI!'))
+
+
+
+
+//   var rooms = {
+//     first: {
+//       description: 'This is the first room',
+//       items: {
+//         chair: 'The old chair looks comfortable',
+//         lamp: 'This lamp looks ancient'
+//       }
+//     },
+//     second: {
+//       description: 'This is the second room',
+//       items: {
+//         couch: 'This couch looks like it would hurt your back',
+//         table: 'On the table there is an unopened bottle of water'
+//       }
+//     }
+//   }
+
+
+//kata example twist 
+// This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
+
+//Add the value "codewars" to the array websites 1,000 times.
+
+
+let websites = []
+let i = 0;
+while(i <5){
+    websites.push('codewars')
+    i++
+}
+console.log(websites)
