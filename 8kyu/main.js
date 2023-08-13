@@ -693,3 +693,32 @@ The order of the sequence has to stay the same.
 // console.log(array("1,2,3"))
 
 
+
+//Printing Array elements with Comma delimiters
+
+// Input: Array of elements
+
+// ["h","o","l","a"]
+
+// Output: String with comma delimited elements of the array in th same order.
+
+// "h,o,l,a"
+
+// function printArray(array){
+// return array.join(",")
+// }
+
+// console.log(printArray(["h","o","l","a"]))
+
+
+//WELCOME TO THE CITY
+
+//Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
+
+function sayHello(name,city,state){
+   
+
+    return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}`
+}
+
+console.log(sayHello(['john','smith'], 'phoenix','arizona'))
