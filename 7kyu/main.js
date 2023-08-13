@@ -240,11 +240,52 @@ return the number of vowels in a given string
 
 ///Tidy Number
 
-function tidyNumber(n){
-    intArr = Array.from(String(n),Number)
-    for(let i =0; i < intArr.length;i++){
-      if(intArr[i] > intArr[i + 1]) return false
-    }
-    return true
-    }
-    console.log(tidyNumber(12))
+// function tidyNumber(n){
+//     intArr = Array.from(String(n),Number)
+//     for(let i =0; i < intArr.length;i++){
+//       if(intArr[i] > intArr[i + 1]) return false
+//     }
+//     return true
+//     }
+//     console.log(tidyNumber(12))
+
+
+//DROPCAPS
+
+/*
+DropCaps means that the first letter of the starting word of the paragraph should be in caps and the remaining lowercase, just like you see in the newspaper.
+
+But for a change, let"s do that for each and every word of the given String. Your task is to capitalize every word that has length greater than 2, leaving smaller words as they are.
+
+*should work also on Leading and Trailing Spaces and caps.
+
+"apple"            => "Apple"
+"apple of banana"  => "Apple of Banana"
+"one   space"      => "One   Space 
+"   space WALK   " => "   Space Walk   " 
+*/
+
+
+function dropCap(n){
+  //converts to array seperated at the space
+let array = n.split(" ")
+//loops through the array
+for(let i = 0; i < array.length; i++){
+  //do this if the element in the array is greater than two characters
+  if(array[i].length > 2){
+    //stores the new version of the word
+    //take the element and capitalize the first character then combine it with the rest of the word keeping it lowercase
+    array[i] = array[i].slice(0,1).toUpperCase() + array[i].slice(1).toLowerCase()
+  }
+}
+//returns the array as string 
+return array.join(" ")
+}
+
+console.log(dropCap('apple of banana'))
+
+//other solution
+
+function dropCap(n){
+  return n.replace(/\S{3,}/g, w => w.slice(0,1).toUpperCase() + w.slice(1).toLowerCase())
+}
