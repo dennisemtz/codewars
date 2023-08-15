@@ -266,26 +266,117 @@ But for a change, let"s do that for each and every word of the given String. You
 */
 
 
-function dropCap(n){
-  //converts to array seperated at the space
-let array = n.split(" ")
-//loops through the array
-for(let i = 0; i < array.length; i++){
-  //do this if the element in the array is greater than two characters
-  if(array[i].length > 2){
-    //stores the new version of the word
-    //take the element and capitalize the first character then combine it with the rest of the word keeping it lowercase
-    array[i] = array[i].slice(0,1).toUpperCase() + array[i].slice(1).toLowerCase()
-  }
+// function dropCap(n){
+//   //converts to array seperated at the space
+// let array = n.split(" ")
+// //loops through the array
+// for(let i = 0; i < array.length; i++){
+//   //do this if the element in the array is greater than two characters
+//   if(array[i].length > 2){
+//     //stores the new version of the word
+//     //take the element and capitalize the first character then combine it with the rest of the word keeping it lowercase
+//     array[i] = array[i].slice(0,1).toUpperCase() + array[i].slice(1).toLowerCase()
+//   }
+// }
+// //returns the array as string 
+// return array.join(" ")
+// }
+
+// console.log(dropCap('apple of banana'))
+
+// //other solution
+
+// function dropCap(n){
+//   return n.replace(/\S{3,}/g, w => w.slice(0,1).toUpperCase() + w.slice(1).toLowerCase())
+// }
+
+
+// is n divisible by...
+
+// function isDivisible(firstN, ...otherN){
+//   return otherN.every(n=> firstN % n === 0)
+// }
+//use spread syntax where the array is passed as argument
+//compare the other numbers to the first number
+
+
+
+//ARRAY ELEMENT PARITY
+
+/*
+In this Kata, you will be given an array of integers whose elements have both a negative and a positive value, except for one integer that is either only negative or only positive. Your task will be to find that integer.
+
+Examples:
+
+[1, -1, 2, -2, 3] => 3
+
+3 has no matching negative appearance
+
+(the only-positive or only-negative integer may appear more than once)
+*/
+
+// function solve(arr){
+//   return arr.find((e)=>!arr.includes(-e))
+// }
+
+
+// console.log(solve([1,-1,2,-2,3]))
+
+//WHAT TIME IS IT
+
+// Given a time in AM/PM format as a string, convert it to 24-hour military time time as a string.
+
+// Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock
+
+
+// let militaryTime = function(input){
+//   let hour = (input.slice(-2) === 'AM' ? 0 : 12)
+//   + + input.slice(0,2) % 12
+
+//   let time = ('00' + hour).slice(-2)
+//   + input.slice(2,-2)
+
+//   return time
+// }
+
+
+
+// console.log(militaryTime('12:00:01AM'))
+
+
+//THE OFFICE II
+
+function boredom(staff){
+let teams = { 'accounts': 1,
+'finance'       : 2 ,
+'canteen'       : 10, 
+'regulation'    : 3, 
+'trading'      : 6, 
+'change'        : 6,
+'IS'            : 8,
+'retail'        : 5,
+'cleaning'      : 4,
+'pissing about' : 25}
+
+//return array of the staff keys
+let scores = Object.keys(staff)
+//map loops through the staff values and matches with the team key and stores the value
+.map(key => teams[staff[key]])
+//sums us the values
+.reduce((a,b)=>a+b,0)
+
+
+
+if(scores <= 80){
+  return 'kill me now'
+}else if(scores <100 && scores >80){
+  return 'i can handle this'
+}else{
+  return 'party time!!' 
 }
-//returns the array as string 
-return array.join(" ")
 }
 
-console.log(dropCap('apple of banana'))
-
-//other solution
-
-function dropCap(n){
-  return n.replace(/\S{3,}/g, w => w.slice(0,1).toUpperCase() + w.slice(1).toLowerCase())
-}
+console.log(boredom({tim: 'change', jim: 'accounts',
+randy: 'canteen', sandy: 'change', andy: 'change', katie: 'IS',
+laura: 'change', saajid: 'IS', alex: 'trading', john: 'accounts',
+mr: 'finance' }))
