@@ -715,10 +715,23 @@ The order of the sequence has to stay the same.
 
 //Create a method that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
 
-function sayHello(name,city,state){
+// function sayHello(name,city,state){
    
 
-    return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}`
-}
+//     return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}`
+// }
 
-console.log(sayHello(['john','smith'], 'phoenix','arizona'))
+// console.log(sayHello(['john','smith'], 'phoenix','arizona'))
+
+//SHORT LONG SHORT
+
+//Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+// function solution(a,b){
+//     if(a.length>b.length){
+//         return `${b}${a}${b}`
+//     }else{
+//         return `${a}${b}${a}`
+//     }
+// }
+// console.log(solution('1','22'))
