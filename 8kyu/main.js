@@ -735,3 +735,15 @@ The order of the sequence has to stay the same.
 //     }
 // }
 // console.log(solution('1','22'))
+
+
+
+//MY HEAD IS AT THE WRONG END
+//Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+
+
+function fixTheMeerkat(arr){
+  return [arr[2],arr[1],arr[0]]
+  
+}
+console.log(fixTheMeerkat(["tail", "body", "head"]))
