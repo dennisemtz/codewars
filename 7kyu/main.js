@@ -346,37 +346,47 @@ Examples:
 
 //THE OFFICE II
 
-function boredom(staff){
-let teams = { 'accounts': 1,
-'finance'       : 2 ,
-'canteen'       : 10, 
-'regulation'    : 3, 
-'trading'      : 6, 
-'change'        : 6,
-'IS'            : 8,
-'retail'        : 5,
-'cleaning'      : 4,
-'pissing about' : 25}
+// function boredom(staff){
+// let teams = { 'accounts': 1,
+// 'finance'       : 2 ,
+// 'canteen'       : 10, 
+// 'regulation'    : 3, 
+// 'trading'      : 6, 
+// 'change'        : 6,
+// 'IS'            : 8,
+// 'retail'        : 5,
+// 'cleaning'      : 4,
+// 'pissing about' : 25}
 
-//return array of the staff keys
-let scores = Object.keys(staff)
-//map loops through the staff values and matches with the team key and stores the value
-.map(key => teams[staff[key]])
-//sums us the values
-.reduce((a,b)=>a+b,0)
+// //return array of the staff keys
+// let scores = Object.keys(staff)
+// //map loops through the staff values and matches with the team key and stores the value
+// .map(key => teams[staff[key]])
+// //sums us the values
+// .reduce((a,b)=>a+b,0)
 
 
 
-if(scores <= 80){
-  return 'kill me now'
-}else if(scores <100 && scores >80){
-  return 'i can handle this'
-}else{
-  return 'party time!!' 
+// if(scores <= 80){
+//   return 'kill me now'
+// }else if(scores <100 && scores >80){
+//   return 'i can handle this'
+// }else{
+//   return 'party time!!' 
+// }
+// }
+
+// console.log(boredom({tim: 'change', jim: 'accounts',
+// randy: 'canteen', sandy: 'change', andy: 'change', katie: 'IS',
+// laura: 'change', saajid: 'IS', alex: 'trading', john: 'accounts',
+// mr: 'finance' }))
+
+
+//BINGO or not
+
+function bingo(a){
+  return [2,9,14,7,15].every(x=> a.includes(x)) ? "WIN" : "LOSE"
+
 }
-}
 
-console.log(boredom({tim: 'change', jim: 'accounts',
-randy: 'canteen', sandy: 'change', andy: 'change', katie: 'IS',
-laura: 'change', saajid: 'IS', alex: 'trading', john: 'accounts',
-mr: 'finance' }))
+console.log(bingo([1,2,3,4,5,6,7,8,9,10]))
