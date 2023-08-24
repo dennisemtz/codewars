@@ -742,8 +742,49 @@ The order of the sequence has to stay the same.
 //Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
 
 
-function fixTheMeerkat(arr){
-  return [arr[2],arr[1],arr[0]]
+// function fixTheMeerkat(arr){
+//   return [arr[2],arr[1],arr[0]]
   
+// }
+// console.log(fixTheMeerkat(["tail", "body", "head"]))
+
+
+//PICK A SET OF FIRST ELEMENTS
+//Write a function to get the first element(s) of a sequence. Passing a parameter n (default=1) will return the first n element(s) of the sequence.
+
+//If n == 0 return an empty sequence []
+
+//PREP
+// param,returns,examples, pseudo code
+
+// arr is the given array
+//n is the given number of elements 
+//return the elements of the sequence in an array
+
+function first(arr,n){
+  //set up a new array 
+  //for loop 
+  //start at index 0
+  //when the length of the array is equal to the n param we return the elements 
+ let a = []
+ if(n=== undefined){
+  return [arr[0]]
+ }else if(n>0){
+  for(let i = 0; i<n && i<arr.length; i++){
+    a.push(arr[i])
+  }
+  return a
+
+ }else{
+  return []
+ }
+  
+
 }
-console.log(fixTheMeerkat(["tail", "body", "head"]))
+//if n is 0 return an empty array
+//accepts numbers and letters 
+console.log(first(["a","b","c","d"])) //return [12,5]
+
+//other solutions
+
+const first = (arr,n=1) => n === 0 ? [] : arr.slice(0,n)
