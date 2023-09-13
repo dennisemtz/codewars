@@ -761,30 +761,111 @@ The order of the sequence has to stay the same.
 //n is the given number of elements 
 //return the elements of the sequence in an array
 
-function first(arr,n){
-  //set up a new array 
-  //for loop 
-  //start at index 0
-  //when the length of the array is equal to the n param we return the elements 
- let a = []
- if(n=== undefined){
-  return [arr[0]]
- }else if(n>0){
-  for(let i = 0; i<n && i<arr.length; i++){
-    a.push(arr[i])
-  }
-  return a
+// function first(arr,n){
+//   //set up a new array 
+//   //for loop 
+//   //start at index 0
+//   //when the length of the array is equal to the n param we return the elements 
+//  let a = []
+//  if(n=== undefined){
+//   return [arr[0]]
+//  }else if(n>0){
+//   for(let i = 0; i<n && i<arr.length; i++){
+//     a.push(arr[i])
+//   }
+//   return a
 
- }else{
-  return []
- }
+//  }else{
+//   return []
+//  }
   
 
-}
+// }
 //if n is 0 return an empty array
 //accepts numbers and letters 
-console.log(first(["a","b","c","d"])) //return [12,5]
+// console.log(first(["a","b","c","d"])) //return [12,5]
 
-//other solutions
+// //other solutions
 
-const first = (arr,n=1) => n === 0 ? [] : arr.slice(0,n)
+// const first = (arr,n=1) => n === 0 ? [] : arr.slice(0,n)
+
+//MULTIPLE OF INDEX
+
+//Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+//PREP
+//param- array of numbers 
+//return a new array of the elements that are multiples of the index of the given array
+//ex : [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
+//positive and negative numbers 
+//length must be greater than 1 
+
+// function multOfIndex(arr){
+//   //loop through the array 
+//   //if the number is divisible by the index number then return to the new array 
+//   return arr.filter((x,i)=>{
+//     return x%i == 0 || x==0
+//   })
+ 
+// }
+
+// console.log(multOfIndex([0,2,3,6,9]))
+
+
+//DUCK DUCK GOOSE
+// Task: Given an array of Player objects (an array of associative arrays in PHP) and an index (1-based), return the name of the chosen Player(name is a property of Player objects, e.g Player.name)
+
+//PREP
+//array and n as params
+//return the name of the player chosen from the n param
+//ex: duck_duck_goose([a, b, c, d], 1) returns a
+// class Player {
+//   constructor(name) {
+//   	this.name = name;
+//   }
+// }
+
+// let ex_names = ["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"];
+// let players = ex_names.map((n) => new Player(n));
+
+// function duckDuckGoose(players,goose){
+//   return players[(goose-1)%players.length].name
+// }
+
+// console.log((duckDuckGoose(players, 1)))
+
+
+//WELCOME
+
+//Think of a way to store the languages as a database. The languages are listed below so you can copy and paste!
+// Write a 'welcome' function that takes a parameter 'language', with a type String, and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
+function greet(language) {
+	let GreetingsDB = {
+    english: 'Welcome',
+    czech: 'Vitejte',
+    danish: 'Velkomst',
+    dutch: 'Welkom',
+    estonian: 'Tere tulemast',
+    finnish: 'Tervetuloa',
+    flemish: 'Welgekomen',
+    french: 'Bienvenue',
+    german: 'Willkommen',
+    irish: 'Failte',
+    italian: 'Benvenuto',
+    latvian: 'Gaidits',
+    lithuanian: 'Laukiamas',
+    polish: 'Witamy',
+    spanish: 'Bienvenido',
+    swedish: 'Valkommen',
+    welsh: 'Croeso'
+  }, 
+  defaultLanguage = 'english';
+  return GreetingsDB[language] || GreetingsDB[defaultLanguage];
+}
+
+
+
+
+
+
+
