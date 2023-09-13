@@ -384,9 +384,58 @@ Examples:
 
 //BINGO or not
 
-function bingo(a){
-  return [2,9,14,7,15].every(x=> a.includes(x)) ? "WIN" : "LOSE"
+// function bingo(a){
+//   return [2,9,14,7,15].every(x=> a.includes(x)) ? "WIN" : "LOSE"
 
+// }
+
+// console.log(bingo([1,2,3,4,5,6,7,8,9,10]))
+
+//MAX DIFF 
+// You must implement a function that returns the difference between the largest and the smallest value in a given list / array (lst) received as the parameter.
+
+// lst contains integers, that means it may contain some negative numbers
+// if lst is empty or contains a single element, return 0
+// lst is not sorted
+
+//PREP
+//array lst as param
+//return the difference between the highest number an lowest number in the array
+
+
+// function maxDiff(list){
+//   //return 0 condition
+//   //else take lowest subtract from highest 
+//   //math.max, math.min
+
+//   if(list <=1){
+//     return 0
+//   }else{
+//     return Math.max(...list) - Math.min(...list)
+//   }
+
+// }
+
+// const maxDiff = list => list <=1 ? 0: Math.max(...list) - Math.min(...list)
+// console.log(maxDiff([]))
+
+
+//AREA OF A CIRCLE
+
+// Complete the function which will return the area of a circle with the given radius.
+
+// Returned value is expected to be accurate up to tolerance of 0.01.
+
+// If the radius is not positive, throw Error.
+
+
+function circleArea(radius){
+  if(radius <= 0){
+    throw new Error
+  }else{
+    let area=Math.PI * radius ** 2
+    return area
+  }
 }
 
-console.log(bingo([1,2,3,4,5,6,7,8,9,10]))
+console.log(circleArea(68     ))
