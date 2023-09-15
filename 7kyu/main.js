@@ -429,13 +429,32 @@ Examples:
 // If the radius is not positive, throw Error.
 
 
-function circleArea(radius){
-  if(radius <= 0){
-    throw new Error
-  }else{
-    let area=Math.PI * radius ** 2
-    return area
-  }
-}
+// function circleArea(radius){
+//   if(radius <= 0){
+//     throw new Error
+//   }else{
+//     let area=Math.PI * radius ** 2
+//     return area
+//   }
+// }
 
-console.log(circleArea(68     ))
+// console.log(circleArea(68     ))
+
+//CHARACTER CONCAT
+// Given a string, you progressively need to concatenate the first letter from the left and the first letter to the right and "1", then the second letter from the left and the second letter to the right and "2", and so on.
+
+// If the string's length is odd drop the central element.
+
+// For example:
+
+// charConcat("abcdef")    == 'af1be2cd3'
+// charConcat("abc!def")   == 'af1be2cd3' // same result
+
+function charConcat(string){
+let str = ''
+let i =0
+let j = string.length -1
+while(i<j) str+= string[i++]+string[j--]+i
+return str
+}
+console.log(charConcat("abcdef"))
