@@ -839,29 +839,48 @@ The order of the sequence has to stay the same.
 
 //Think of a way to store the languages as a database. The languages are listed below so you can copy and paste!
 // Write a 'welcome' function that takes a parameter 'language', with a type String, and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
-function greet(language) {
-	let GreetingsDB = {
-    english: 'Welcome',
-    czech: 'Vitejte',
-    danish: 'Velkomst',
-    dutch: 'Welkom',
-    estonian: 'Tere tulemast',
-    finnish: 'Tervetuloa',
-    flemish: 'Welgekomen',
-    french: 'Bienvenue',
-    german: 'Willkommen',
-    irish: 'Failte',
-    italian: 'Benvenuto',
-    latvian: 'Gaidits',
-    lithuanian: 'Laukiamas',
-    polish: 'Witamy',
-    spanish: 'Bienvenido',
-    swedish: 'Valkommen',
-    welsh: 'Croeso'
-  }, 
-  defaultLanguage = 'english';
-  return GreetingsDB[language] || GreetingsDB[defaultLanguage];
+// function greet(language) {
+// 	let GreetingsDB = {
+//     english: 'Welcome',
+//     czech: 'Vitejte',
+//     danish: 'Velkomst',
+//     dutch: 'Welkom',
+//     estonian: 'Tere tulemast',
+//     finnish: 'Tervetuloa',
+//     flemish: 'Welgekomen',
+//     french: 'Bienvenue',
+//     german: 'Willkommen',
+//     irish: 'Failte',
+//     italian: 'Benvenuto',
+//     latvian: 'Gaidits',
+//     lithuanian: 'Laukiamas',
+//     polish: 'Witamy',
+//     spanish: 'Bienvenido',
+//     swedish: 'Valkommen',
+//     welsh: 'Croeso'
+//   }, 
+//   defaultLanguage = 'english';
+//   return GreetingsDB[language] || GreetingsDB[defaultLanguage];
+// }
+
+//SORT AND STAR 
+// You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+
+// The returned value must be a string, and have "***" between each of its letters.
+
+// You should not remove or add elements from/to the array.
+
+function twoSort(s){
+let sorted = s.sort()
+let word = sorted[0].split("").join("***")
+return word
+
 }
+console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]))
+
+
+
+
 
 
 
