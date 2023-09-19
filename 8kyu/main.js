@@ -870,15 +870,63 @@ The order of the sequence has to stay the same.
 
 // You should not remove or add elements from/to the array.
 
-function twoSort(s){
-let sorted = s.sort()
-let word = sorted[0].split("").join("***")
-return word
+// function twoSort(s){
+// let sorted = s.sort()
+// let word = sorted[0].split("").join("***")
+// return word
 
+// }
+// console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]))
+
+//GRASSHOPPER GRADEBOOK
+// Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+
+
+// function getGrade(s1,s2,s3){
+//   let avg = (s1+s2+s3)/3
+//   if(avg >=90){
+//     return 'A'
+//    }else if(avg >=80){
+//     return 'B'
+//    }else if(avg >=70){
+//     return 'C'
+//    }else if(avg >=60){
+//    return 'D'
+// }else{
+//    return 'F'
+//   }
+  
+// }
+
+
+// console.log(getGrade(70,70,100))
+
+
+//SUM MIXED ARRAY
+//Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+function sumMix(x){
+  let arr=[]
+ x.forEach(item => {return arr.push(item/1)});
+ return arr.reduce((acc,curr)=>{return acc+curr},0)
 }
-console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]))
+//other solution
+// const sumMix=x=>x.reduce((a,b)=>+b+a,0)
 
 
+
+// function sumMix(x){
+//   return x.map(a=>+a).reduce((a,b)=>a+b)
+// }
+// function sumMix(x){
+//   let sum = 0
+//   for(let i=0;i<x.length;i++){
+//     sum += Number(x[i])
+//   }
+//   return sum
+// }
+// console.log(sumMix([9, 3, '7', '3']))
 
 
 
