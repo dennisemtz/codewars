@@ -450,11 +450,61 @@ Examples:
 // charConcat("abcdef")    == 'af1be2cd3'
 // charConcat("abc!def")   == 'af1be2cd3' // same result
 
-function charConcat(string){
-let str = ''
-let i =0
-let j = string.length -1
-while(i<j) str+= string[i++]+string[j--]+i
-return str
+// function charConcat(string){
+// let str = ''
+// let i =0
+// let j = string.length -1
+// while(i<j) str+= string[i++]+string[j--]+i
+// return str
+// }
+// console.log(charConcat("abcdef"))
+
+//VOWEL COUNT
+//Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+// function getCount(str){
+//   let vowels = ['a','e','i','o','u']
+//   let count=0
+
+//   for(let i=0;i<str.length;i++){
+//     for(let j =0;j<vowels.length;j++){
+//       if(str[i]===vowels[j]){
+//         count++
+//       }
+//     }
+    
+//   }
+//   return count
+
+// }
+// function getCount(str){
+// return str.split("").filter(c=>'aeiou'.includes(c)).length
+// }
+
+// console.log(getCount('abracadabra'))
+
+//SQUARE EVER DIGIT
+//you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 9 is 81 and 1 is 1. (81-1-1-81)
+
+// function squareDigits(num){
+// return +num.toString().split("").map(i=>i*i).join("")
+// }
+//other result
+
+function squareDigits(num){
+let string = num.toString()
+let result = []
+for(let i = 0;i<string.length;i++){
+  result[i] = string[i]*string[i]
 }
-console.log(charConcat("abcdef"))
+return Number(result.join(""))
+}
+console.log(squareDigits(9119))
+
+
