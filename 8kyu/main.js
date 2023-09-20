@@ -906,11 +906,11 @@ The order of the sequence has to stay the same.
 //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 
 // Return your answer as a number.
-function sumMix(x){
-  let arr=[]
- x.forEach(item => {return arr.push(item/1)});
- return arr.reduce((acc,curr)=>{return acc+curr},0)
-}
+// function sumMix(x){
+//   let arr=[]
+//  x.forEach(item => {return arr.push(item/1)});
+//  return arr.reduce((acc,curr)=>{return acc+curr},0)
+// }
 //other solution
 // const sumMix=x=>x.reduce((a,b)=>+b+a,0)
 
@@ -928,11 +928,95 @@ function sumMix(x){
 // }
 // console.log(sumMix([9, 3, '7', '3']))
 
+//AREA OR PERIMETER
+//You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+// const areaOrPerimeter = function(l,w) {
+//   return l===w ? l*w : (l*2)+(w*2)
+//   }
+// console.log(areaOrPerimeter(6,10))
+
+//REMOVE EXCLAMATION MARKS
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+// function removeMarks(s){
+
+//   return s.replaceAll("!","")
+// }
+// console.log(removeMarks("vyWnZlGnOx!PTXEJxiXnc tlADfxPIVy!wSLVcpKjBL"))
+
+//The FEAST OF MANY BEASTS
+//make a function taking two arguments of beast and dish, return true if the first and last leatter of string beast and dish are the same
+
+// function feast(beast,dish){
+//   let b = beast
+//   let d = dish
+// if(b[0]=== d[0]&&b[b.length-1]==d[d.length-1]){
+//   return true
+// }else{
+//   return false
+// }
+  
+// }
+// console.log(feast("brown bear", "bear claw"))
 
 
+//TRANSPORTATION ON VACATION
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.Write a code that gives out the total amount for different days(d).
 
+// function rentalCarCost(d){
+//   let totalCost = 0
+//   if(d>=7){
+//     return totalCost += (d*40) - 50
+//   }else if(d>=3){
+//     return totalCost += (d*40) - 20
+//   }else{
+//     return totalCost+=d*40
+//   }
+// }
+// console.log(rentalCarCost())
 
+//LOGIC DRILLS: TRAFFIC LIGHT
+//You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
 
+// function updateLight(current){
+//   if(current=="green"){
+//     return "yellow"
+//   }else if(current =="yellow"){
+//     return "red"
+//   }else{
+//     return "green"
+//   }
+// }
 
+// const updateLight = current =>({
+//   green:"yellow",
+//   yellow:"red",
+//   red:"green",
+// })[current]
+// console.log(updateLight("red"))
 
+//DO I GET A BONUS
+// Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+
+// function bonusTime(salary,bonus){
+//   return bonus? `\u00A3${salary *10}`: `\u00A3${salary}`
+// }
+// console.log(bonusTime(10000,true))
+
+//L1 SET ALARM
+//creat function with two arguments of employed and vacation, the function should return true if you are employed and not on vacation, return false otherwise 
+
+// function setAlarm(employed,vacation){
+//   return employed>vacation
+// }
+// console.log(setAlarm(false,false))
+
+//PERSONALIZED MESSAGE
+//create a function that takes two arguments of name and owner, if the name is the same a owner return one greeting, else return another greeting
+
+function greet(name,owner){
+  return name ===owner? "Hello boss": "Hello guest"
+}
 
