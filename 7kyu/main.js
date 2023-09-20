@@ -497,14 +497,37 @@ Examples:
 // }
 //other result
 
-function squareDigits(num){
-let string = num.toString()
-let result = []
-for(let i = 0;i<string.length;i++){
-  result[i] = string[i]*string[i]
-}
-return Number(result.join(""))
-}
-console.log(squareDigits(9119))
+// function squareDigits(num){
+// let string = num.toString()
+// let result = []
+// for(let i = 0;i<string.length;i++){
+//   result[i] = string[i]*string[i]
+// }
+// return Number(result.join(""))
+// }
+// console.log(squareDigits(9119))
 
+//HIGHEST LOWEST
+//given a string of numbers, return the highest and lowest number as a string seperated by a space 
 
+// function highAndLow(num){
+//   let sorted = num.split(" ").sort((a,b)=>b-a)
+//   return [sorted[0],sorted[sorted.length-1]].join(" ")
+// }
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+//MUMBLING
+//take a string and create a function that returns each character repeated by the index number it is located in,seperated by a dash, the first character being repeated is uppercase, the following lowercase
+
+// function accum(s){
+// return s.split("").map((c,i)=>(c.toUpperCase()+c.toLowerCase().repeat(i))).join("-")
+// }
+function accum(str){
+  let letters=str.split("")
+  let results = []
+  for(let i =0;i<letters.length;i++){
+    results.push(letters[i].toUpperCase()+Array(i+1).join(letters[i].toLowerCase()))
+  }
+  return results.join("-")
+}
+console.log(accum("ZpglnRxqenU"))
