@@ -522,12 +522,39 @@ Examples:
 // function accum(s){
 // return s.split("").map((c,i)=>(c.toUpperCase()+c.toLowerCase().repeat(i))).join("-")
 // }
-function accum(str){
-  let letters=str.split("")
-  let results = []
-  for(let i =0;i<letters.length;i++){
-    results.push(letters[i].toUpperCase()+Array(i+1).join(letters[i].toLowerCase()))
+// function accum(str){
+//   let letters=str.split("")
+//   let results = []
+//   for(let i =0;i<letters.length;i++){
+//     results.push(letters[i].toUpperCase()+Array(i+1).join(letters[i].toLowerCase()))
+//   }
+//   return results.join("-")
+// }
+// console.log(accum("ZpglnRxqenU"))
+
+//GET THE MIDDLE CHARACTER
+//given a word, return the middle character of the word, if its even return the two middle characters
+
+// function getMiddle(s){
+// if(s.length%2==1){
+//   return s.substring((s.length /2)+1,(s.length/2))
+// }else if(s.length %2==0){
+//   return s.substring((s.length/2)-1,(s.length/2)+1)
+// }
+// }
+// console.log(getMiddle("handers"))
+
+//ISOGRAMS
+//create a function that returns true if a string cointains no repeating letters and false if it does
+
+function isIsogram(str){
+  let word = str.toLowerCase()
+  for(let i=0;i<word.length;i++){
+    if(word.indexOf(word[i])!== word.lastIndexOf(word[i])){
+      return false
+    }
   }
-  return results.join("-")
+  return true
 }
-console.log(accum("ZpglnRxqenU"))
+//using indexof and lastindex of: the first occurence of the character is also the last occurence; does not repeat. 
+console.log(isIsogram("Aba"))
