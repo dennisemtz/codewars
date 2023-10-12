@@ -1016,7 +1016,30 @@ The order of the sequence has to stay the same.
 //PERSONALIZED MESSAGE
 //create a function that takes two arguments of name and owner, if the name is the same a owner return one greeting, else return another greeting
 
-function greet(name,owner){
-  return name ===owner? "Hello boss": "Hello guest"
-}
+// function greet(name,owner){
+//   return name ===owner? "Hello boss": "Hello guest"
+// }
 
+
+//write a function that calculates the original product price, without the VAT of 15%
+
+// const excludingVatPrice = p => p === null ? -1: +(p/1.15).toFixed(2)
+// console.log(excludingVatPrice(230))
+
+//CLASSY CLASSES
+//complete the person class by filling the constructor method that accepts a name as a string and an age as a number, to print name age is age
+
+class Person{
+  constructor(name,age){
+   this.name = name
+   this.age=age
+  }
+ sentence(){
+  return `${this.name}s age is ${this.age} `
+ }
+ get info(){
+  return this.sentence()
+ }
+}
+let john = new Person('john',34)
+console.log(john.info)
