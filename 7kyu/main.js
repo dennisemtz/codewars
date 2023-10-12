@@ -598,9 +598,36 @@ Examples:
 //up to 8 eggs at a time
 //5 min to boil an egg
 
-function cookingTime(eggs){
-let maxEggs = 8
-let time = 5
-return Math.ceil(eggs/maxEggs) * time
+// function cookingTime(eggs){
+// let maxEggs = 8
+// let time = 5
+// return Math.ceil(eggs/maxEggs) * time
+// }
+// console.log(cookingTime(9))
+
+//SHORTEST WORD
+//given a string of words, return the length of the shortes word(s)
+
+// const findShort = (s) => s
+//   .split(' ')
+//   .sort((a, b) => b.length - a.length)
+//   .pop()
+//   .length;
+
+
+// function findShort(s){
+// return Math.min(...s.split(" ").map(s=>s.length))
+// }
+// console.log(findShort("Let's travel abroad shall we"))
+
+//LIST FILTERING
+//return an array with the strings filtered out 
+
+function filterList(l){
+
+    return l.filter((item)=>{
+      return typeof item != "string"|| !!item instanceof String
+    })
+  
 }
-console.log(cookingTime(9))
+console.log(filterList([1,2,'a','b']))
