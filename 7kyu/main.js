@@ -547,14 +547,60 @@ Examples:
 //ISOGRAMS
 //create a function that returns true if a string cointains no repeating letters and false if it does
 
-function isIsogram(str){
-  let word = str.toLowerCase()
-  for(let i=0;i<word.length;i++){
-    if(word.indexOf(word[i])!== word.lastIndexOf(word[i])){
-      return false
-    }
-  }
-  return true
-}
+// function isIsogram(str){
+//   let word = str.toLowerCase()
+//   for(let i=0;i<word.length;i++){
+//     if(word.indexOf(word[i])!== word.lastIndexOf(word[i])){
+//       return false
+//     }
+//   }
+//   return true
+// }
 //using indexof and lastindex of: the first occurence of the character is also the last occurence; does not repeat. 
-console.log(isIsogram("Aba"))
+// console.log(isIsogram("Aba"))
+
+//EXES AND OHS
+//create a function that takes in a string, check if it contains the same number of x and o, return a boolean, if there are no x or o return true
+
+// function XO(str){
+// str=str.toLowerCase().split("")
+// return str.filter(x=>x==="x").length === str.filter(x=>x==="o").length
+// }
+
+// function XO(str){
+//   if(str==""|| str ==null)return true
+//   str=str.toLowerCase().split("")
+//   let x=0
+//   let o=0
+//   for(let i =0;i<str.length;i++){
+//     if(str[i]==="x"){
+//       x++
+//     }
+//     if(str[i]==="o"){
+//       o++
+//     }
+//   }
+//   if(x===o){
+//     return true
+//   }
+//   return false
+// }
+
+// function XO(str){
+//   let x=str.match(/x/gi)
+//   let o = str.match(/o/gi)
+//   return (x&&x.length)===(o&&o.length)
+// }
+// console.log(XO("Oooxx"))
+
+//BOILED EGGS
+//create a function that takes the number of eggs to boil and return the number of minutes it would take to boil them
+//up to 8 eggs at a time
+//5 min to boil an egg
+
+function cookingTime(eggs){
+let maxEggs = 8
+let time = 5
+return Math.ceil(eggs/maxEggs) * time
+}
+console.log(cookingTime(9))
