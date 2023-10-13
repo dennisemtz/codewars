@@ -623,11 +623,28 @@ Examples:
 //LIST FILTERING
 //return an array with the strings filtered out 
 
-function filterList(l){
+// function filterList(l){
 
-    return l.filter((item)=>{
-      return typeof item != "string"|| !!item instanceof String
-    })
+//     return l.filter((item)=>{
+//       return typeof item != "string"|| !!item instanceof String
+//     })
   
+// }
+// console.log(filterList([1,2,'a','b']))
+
+//CREDIT CARD MASK
+//create a function that takes in a string and changes all the character besides the last for into "#", return the new string 
+
+// function maskify(cc){
+//  if(cc.length <4 || cc === null){
+//     return cc
+//   }else{
+//     let arr = cc.split("")
+//     return arr.fill("#",0,-4).join("")
+//   }
+// }
+
+function maskify(cc){
+  return cc.slice(0,-4).replace(/./g,"#")+ cc.slice(-4)
 }
-console.log(filterList([1,2,'a','b']))
+console.log(maskify("11111"))
