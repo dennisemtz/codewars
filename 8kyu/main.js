@@ -1029,17 +1029,29 @@ The order of the sequence has to stay the same.
 //CLASSY CLASSES
 //complete the person class by filling the constructor method that accepts a name as a string and an age as a number, to print name age is age
 
-class Person{
-  constructor(name,age){
-   this.name = name
-   this.age=age
-  }
- sentence(){
-  return `${this.name}s age is ${this.age} `
- }
- get info(){
-  return this.sentence()
- }
+// class Person{
+//   constructor(name,age){
+//    this.name = name
+//    this.age=age
+//   }
+//  sentence(){
+//   return `${this.name}s age is ${this.age} `
+//  }
+//  get info(){
+//   return this.sentence()
+//  }
+// }
+// let john = new Person('john',34)
+// console.log(john.info)
+
+//DOUBLE CHAR
+//given a string, return a new string where each character - case-sensitive, is repeared once 
+
+function doubleChar(str){
+  let arr = str.split("")
+  return arr.map((item)=>{
+    return item.repeat(2)
+  })
+  .join("")
 }
-let john = new Person('john',34)
-console.log(john.info)
+console.log(doubleChar("StrIng"))
