@@ -652,10 +652,20 @@ Examples:
 //JADEN CASING STRINGS
 //create a function that takes in a string and returns a new string where each word's first character is capitalized.
 
-function toJadenString(str){
-  let arr = str.split(" ")
-return arr.map((word)=>{
-  return word[0].toUpperCase()+word.slice(1)
-}).join(" ")
+// function toJadenString(str){
+//   let arr = str.split(" ")
+// return arr.map((word)=>{
+//   return word[0].toUpperCase()+word.slice(1)
+// }).join(" ")
+// }
+// console.log(toJadenString("how can"))
+
+//COMPLEMENTARY DNA
+//create a function that takes a dna string and returns the complentary rna atring
+// A ->T
+//G -> C
+let pairs = {A:"T", T:"A",C:"G",G:"C"}
+function DNAAstrand(dna){
+ return dna.split("").map((p)=>{return pairs[p]}).join("")
 }
-console.log(toJadenString("how can"))
+console.log(DNAAstrand("TATA"))
