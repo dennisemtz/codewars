@@ -664,8 +664,17 @@ Examples:
 //create a function that takes a dna string and returns the complentary rna atring
 // A ->T
 //G -> C
-let pairs = {A:"T", T:"A",C:"G",G:"C"}
-function DNAAstrand(dna){
- return dna.split("").map((p)=>{return pairs[p]}).join("")
+// let pairs = {A:"T", T:"A",C:"G",G:"C"}
+// function DNAAstrand(dna){
+//  return dna.split("").map((p)=>{return pairs[p]}).join("")
+// }
+// console.log(DNAAstrand("TATA"))
+
+//SUM OF TWO LOWEST POSITIVE INTEGERS
+//create a function that sums the two lowest positive integers in an array, minimum 4 integers
+
+function sumTwo(num){
+let sorted = num.sort((a,b)=>a-b)
+ return sorted = sorted[0]+sorted[1]
 }
-console.log(DNAAstrand("TATA"))
+console.log(sumTwo([15, 28, 4, 2, 43]))
