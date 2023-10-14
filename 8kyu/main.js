@@ -1090,7 +1090,22 @@ The order of the sequence has to stay the same.
 //COCKROACH
 //create a function that takes in the cockroache's speed in km per hour and return it in cm per second rounded down to the integer
 
-function cockroachSpeed(s){
-return Math.floor(s * 27.7778)/1
+// function cockroachSpeed(s){
+// return Math.floor(s * 27.7778)/1
+// }
+// console.log(cockroachSpeed(1.7923560943431125))
+
+//FIND THE FIRST NON-CONSECUTIVE NUMBER
+//find the first element in the array that is not consecutive
+//if the whole array is consecutive return null
+//array should have at least 2 elements and could be either positive or negative integers
+
+function firstNonConsecutive(arr){
+ for(let i =0;i<arr.length-1;i++){
+  if(arr[i]+1!==arr[i+1]){
+    return arr[i+1]
+  }
+ }
+ return null
 }
-console.log(cockroachSpeed(1.7923560943431125))
+console.log(firstNonConsecutive([1,2,3,4,6,7]))
