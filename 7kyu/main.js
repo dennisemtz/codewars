@@ -644,7 +644,18 @@ Examples:
 //   }
 // }
 
-function maskify(cc){
-  return cc.slice(0,-4).replace(/./g,"#")+ cc.slice(-4)
+// function maskify(cc){
+//   return cc.slice(0,-4).replace(/./g,"#")+ cc.slice(-4)
+// }
+// console.log(maskify("11111"))
+
+//JADEN CASING STRINGS
+//create a function that takes in a string and returns a new string where each word's first character is capitalized.
+
+function toJadenString(str){
+  let arr = str.split(" ")
+return arr.map((word)=>{
+  return word[0].toUpperCase()+word.slice(1)
+}).join(" ")
 }
-console.log(maskify("11111"))
+console.log(toJadenString("how can"))
