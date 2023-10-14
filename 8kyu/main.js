@@ -1047,11 +1047,42 @@ The order of the sequence has to stay the same.
 //DOUBLE CHAR
 //given a string, return a new string where each character - case-sensitive, is repeared once 
 
-function doubleChar(str){
-  let arr = str.split("")
-  return arr.map((item)=>{
-    return item.repeat(2)
-  })
-  .join("")
+// function doubleChar(str){
+//   let arr = str.split("")
+//   return arr.map((item)=>{
+//     return item.repeat(2)
+//   })
+//   .join("")
+// }
+
+// function doubleChar(str){
+//   let word = ''
+//   for(let i = 0; i<str.length;i++){
+//     word = word + str[i] + str[i]
+//   }
+//   return word
+// }
+
+// function doubleChar(str){
+//   return str.split("").map((item)=>{
+//     return item + item
+//   }).join("")
+// }
+// console.log(doubleChar("StrIng"))
+
+//WILL THERE BE ENOUGH SPACE?
+//create a function that takes in three parameters, cap,on,and wait to determine if enough people can fit on the bus. 
+//cap is the amount of people the bus can hold,on is the amount of people already on the bus, and wait it how many people need to get on the bus, all excluding the driver. 
+//return the number of how many people can not fit on the bus
+
+// function enough(cap,on,wait){
+//   if(on + wait <= cap){
+//     return 0
+//   }else{
+//     return (on+wait)-cap
+//   }
+// }
+function enough(cap,on,wait){
+  return Math.max(0,wait-cap+on)
 }
-console.log(doubleChar("StrIng"))
+console.log(enough(100,60,50))
