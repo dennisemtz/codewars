@@ -1082,7 +1082,15 @@ The order of the sequence has to stay the same.
 //     return (on+wait)-cap
 //   }
 // }
-function enough(cap,on,wait){
-  return Math.max(0,wait-cap+on)
+// function enough(cap,on,wait){
+//   return Math.max(0,wait-cap+on)
+// }
+// console.log(enough(100,60,50))
+
+//COCKROACH
+//create a function that takes in the cockroache's speed in km per hour and return it in cm per second rounded down to the integer
+
+function cockroachSpeed(s){
+return Math.floor(s * 27.7778)/1
 }
-console.log(enough(100,60,50))
+console.log(cockroachSpeed(1.7923560943431125))
