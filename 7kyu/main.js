@@ -673,8 +673,23 @@ Examples:
 //SUM OF TWO LOWEST POSITIVE INTEGERS
 //create a function that sums the two lowest positive integers in an array, minimum 4 integers
 
-function sumTwo(num){
-let sorted = num.sort((a,b)=>a-b)
- return sorted = sorted[0]+sorted[1]
+// function sumTwo(num){
+// let sorted = num.sort((a,b)=>a-b)
+//  return sorted = sorted[0]+sorted[1]
+// }
+// console.log(sumTwo([15, 28, 4, 2, 43]))
+
+//SUM OF NUMBERS
+//given two integers, neg or pos, find the sum of all the integers between and including them and return it. if the two integers are equal return a or b
+
+//ex:(1,0) ->1 
+//(-1,2)-> 2
+
+function getsum(a,b){
+
+ let min =Math.min(a,b)
+ let max = Math.max(a,b)
+ return (max-min+1) * (min+max)/2
+
 }
-console.log(sumTwo([15, 28, 4, 2, 43]))
+console.log(getsum(-1,2))
