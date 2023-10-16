@@ -1100,12 +1100,20 @@ The order of the sequence has to stay the same.
 //if the whole array is consecutive return null
 //array should have at least 2 elements and could be either positive or negative integers
 
-function firstNonConsecutive(arr){
- for(let i =0;i<arr.length-1;i++){
-  if(arr[i]+1!==arr[i+1]){
-    return arr[i+1]
-  }
- }
- return null
+// function firstNonConsecutive(arr){
+//  for(let i =0;i<arr.length-1;i++){
+//   if(arr[i]+1!==arr[i+1]){
+//     return arr[i+1]
+//   }
+//  }
+//  return null
+// }
+// console.log(firstNonConsecutive([1,2,3,4,6,7]))
+
+//TWICE AS OLD
+//create a function that takes in the fathers age and son's age and calculate how many years ado the father was twice as old as his son.
+
+function twiceAsOld(dadAge,sonAge){
+return Math.abs((sonAge*2)-dadAge)
 }
-console.log(firstNonConsecutive([1,2,3,4,6,7]))
+console.log(twiceAsOld(36,7))
