@@ -685,11 +685,26 @@ Examples:
 //ex:(1,0) ->1 
 //(-1,2)-> 2
 
-function getsum(a,b){
+// function getsum(a,b){
 
- let min =Math.min(a,b)
- let max = Math.max(a,b)
- return (max-min+1) * (min+max)/2
+//  let min =Math.min(a,b)
+//  let max = Math.max(a,b)
+//  return (max-min+1) * (min+max)/2
 
+// }
+// console.log(getsum(-1,2))
+
+//CATEGORIZE NEW MEMBER
+//given a list of pairs, return whether the member will be categorized as a senior or open. if the member is over 55 and a handicap greater than 7, they are a senior, otherwise they are open category. return as an array.
+
+function openOrSenior(data){
+return data.map(([age,handicap])=>{
+  if(age >54 && handicap>7){
+    return "Senior"
+  }else{
+    return "Open"
+  }
+})
+  
 }
-console.log(getsum(-1,2))
+console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
