@@ -1113,7 +1113,19 @@ The order of the sequence has to stay the same.
 //TWICE AS OLD
 //create a function that takes in the fathers age and son's age and calculate how many years ado the father was twice as old as his son.
 
-function twiceAsOld(dadAge,sonAge){
-return Math.abs((sonAge*2)-dadAge)
+// function twiceAsOld(dadAge,sonAge){
+// return Math.abs((sonAge*2)-dadAge)
+// }
+// console.log(twiceAsOld(36,7))
+
+//KEEP UP THE HOOP
+//write a function that takes in the number of hoops and return an encouraging message
+
+function hoopCount(n){
+  if(n>=10){
+    return "Great, now move on to tricks"
+  }else{
+    return "Keep at it until you get it."
+  }
 }
-console.log(twiceAsOld(36,7))
+console.log(hoopCount(3))
