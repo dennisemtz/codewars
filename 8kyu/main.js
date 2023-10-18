@@ -1140,5 +1140,19 @@ The order of the sequence has to stay the same.
 //     return false
 //   }
 // }
-const checkForFactor = (base,factor)=> !(base%factor)
-console.log(checkForFactor(10,2))
+// const checkForFactor = (base,factor)=> !(base%factor)
+// console.log(checkForFactor(10,2))
+
+//ALL STAR CODE CHALLENGE
+//create a function that accepts a string and a single character and return the number of occurences of the chracter, if there are non return 0
+
+function strCound(str,letter){
+  let num =0
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == letter)
+      num++;
+  }
+  
+  return num
+}
+console.log(strCound('Hello',"o"))
