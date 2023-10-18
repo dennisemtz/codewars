@@ -1121,11 +1121,24 @@ The order of the sequence has to stay the same.
 //KEEP UP THE HOOP
 //write a function that takes in the number of hoops and return an encouraging message
 
-function hoopCount(n){
-  if(n>=10){
-    return "Great, now move on to tricks"
-  }else{
-    return "Keep at it until you get it."
-  }
-}
-console.log(hoopCount(3))
+// function hoopCount(n){
+//   if(n>=10){
+//     return "Great, now move on to tricks"
+//   }else{
+//     return "Keep at it until you get it."
+//   }
+// }
+// console.log(hoopCount(3))
+
+//CHECK FOR FACTOR
+//create a function that takes in a factror and a base and return true if it is a factor or false if it's not
+
+// function checkForFactor(base,factor){
+//   if(base%factor===0){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+const checkForFactor = (base,factor)=> !(base%factor)
+console.log(checkForFactor(10,2))
