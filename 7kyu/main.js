@@ -697,14 +697,41 @@ Examples:
 //CATEGORIZE NEW MEMBER
 //given a list of pairs, return whether the member will be categorized as a senior or open. if the member is over 55 and a handicap greater than 7, they are a senior, otherwise they are open category. return as an array.
 
-function openOrSenior(data){
-return data.map(([age,handicap])=>{
-  if(age >54 && handicap>7){
-    return "Senior"
-  }else{
-    return "Open"
+// function openOrSenior(data){
+// return data.map(([age,handicap])=>{
+//   if(age >54 && handicap>7){
+//     return "Senior"
+//   }else{
+//     return "Open"
+//   }
+// })
+// }
+
+// function openOrSenior(data){
+//   let result =[]
+//   data.forEach(element => {
+//     if(element[0]>=55 && element[1]>7){
+//       result.push("Senior")
+//     }else{
+//       result.push('Open')
+//     }
+    
+//   });
+//   return result
+// }
+
+// console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
+
+//FRIEND OF FOE
+//given an array of names, return the names in an array that are your friends; if their name hase exaclty 4 letters they are your friend.
+
+function friend(friends){
+  let list = []
+  for(let i =0;i<friends.length;i++){
+    if(friends[i].length===4){
+      list.push(friends[i])
+    }
   }
-})
-  
+  return list
 }
-console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
+console.log(friend(["Love", "Your", "Face", "1"]))
