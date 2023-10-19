@@ -1146,13 +1146,38 @@ The order of the sequence has to stay the same.
 //ALL STAR CODE CHALLENGE
 //create a function that accepts a string and a single character and return the number of occurences of the chracter, if there are non return 0
 
-function strCound(str,letter){
-  let num =0
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] == letter)
-      num++;
-  }
+// function strCound(str,letter){
+//   let num =0
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] == letter)
+//       num++;
+//   }
   
-  return num
+//   return num
+// }
+// console.log(strCound('Hello',"o"))
+
+//SWITCH IT UP
+//create a function that takes in a number and return the number as a string
+
+function switchItUp(number){
+  switch(number){
+    case 0:
+      return"Zero"
+    case 1:
+      return "One"
+    case 2:
+      return "Two"
+    case 3:
+      return "Three"
+    case 4:
+      return "Four"
+    case 5:
+      return "Five"
+    case 6:return "Six"
+    case 7:return "Seven"
+    case 8:return "Eight"
+    case 9:return "Nine"
+  }
 }
-console.log(strCound('Hello',"o"))
+console.log(switchItUp(0))
