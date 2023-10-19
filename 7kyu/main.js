@@ -725,13 +725,26 @@ Examples:
 //FRIEND OF FOE
 //given an array of names, return the names in an array that are your friends; if their name hase exaclty 4 letters they are your friend.
 
-function friend(friends){
-  let list = []
-  for(let i =0;i<friends.length;i++){
-    if(friends[i].length===4){
-      list.push(friends[i])
-    }
-  }
-  return list
+// function friend(friends){
+//   let list = []
+//   for(let i =0;i<friends.length;i++){
+//     if(friends[i].length===4){
+//       list.push(friends[i])
+//     }
+//   }
+//   return list
+// }
+// console.log(friend(["Love", "Your", "Face", "1"]))
+
+//STRING ENDS WITH
+//create a function that takes in a two strings, if the second arugument passed ends with the first argument passed return true else false
+//('abc","bc")->true
+//("abc","d")->false
+function solution(str,ending){
+  // let arr1 = str.split("")
+  // let arr2=ending.split("")
+   // return arr1.slice(Math.max(arr1.length-2,1)).join("") === arr2.join("")
+  //  return str.endsWith(ending)
+  return str.substr(-ending.length)==ending
 }
-console.log(friend(["Love", "Your", "Face", "1"]))
+console.log(solution('sensei', 'i'))
