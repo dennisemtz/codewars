@@ -740,11 +740,24 @@ Examples:
 //create a function that takes in a two strings, if the second arugument passed ends with the first argument passed return true else false
 //('abc","bc")->true
 //("abc","d")->false
-function solution(str,ending){
-  // let arr1 = str.split("")
-  // let arr2=ending.split("")
-   // return arr1.slice(Math.max(arr1.length-2,1)).join("") === arr2.join("")
-  //  return str.endsWith(ending)
-  return str.substr(-ending.length)==ending
+// function solution(str,ending){
+//   // let arr1 = str.split("")
+//   // let arr2=ending.split("")
+//    // return arr1.slice(Math.max(arr1.length-2,1)).join("") === arr2.join("")
+//   //  return str.endsWith(ending)
+//   return str.substr(-ending.length)==ending
+// }
+// console.log(solution('sensei', 'i'))
+
+//
+
+//IS IT A TRIANGLE
+//create a function that accepts 3 integers, the function should return true if a triangle can be built or false otherwise. All sides bust be greater than 0 to be accepted
+// const isTriangle = (a,b,c)=>{return a+b>c&& b+c>a&&c+a>b}
+
+function isTriangle(a,b,c){
+  [a,b,c]=[a,b,c].sort((x,y)=>x-y)//sorts the numbers in increasing order
+  return a+b>c//now adding the lesser two numbers together and test if the sum is less than the third value
 }
-console.log(solution('sensei', 'i'))
+
+console.log(isTriangle(1,2,2))
