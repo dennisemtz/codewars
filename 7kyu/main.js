@@ -755,9 +755,38 @@ Examples:
 //create a function that accepts 3 integers, the function should return true if a triangle can be built or false otherwise. All sides bust be greater than 0 to be accepted
 // const isTriangle = (a,b,c)=>{return a+b>c&& b+c>a&&c+a>b}
 
-function isTriangle(a,b,c){
-  [a,b,c]=[a,b,c].sort((x,y)=>x-y)//sorts the numbers in increasing order
-  return a+b>c//now adding the lesser two numbers together and test if the sum is less than the third value
-}
+// function isTriangle(a,b,c){
+//   [a,b,c]=[a,b,c].sort((x,y)=>x-y)//sorts the numbers in increasing order
+//   return a+b>c//now adding the lesser two numbers together and test if the sum is less than the third value
+// }
 
-console.log(isTriangle(1,2,2))
+// console.log(isTriangle(1,2,2))
+
+//BINARY ADDITION
+//create a function that adds two numbers and returns their sum as a binary as a string 
+
+// function addBinary(a,b){
+//   return (a+b).toString(2)
+// }
+// console.log(addBinary(10,3))
+
+//TWO TO ONE
+//create a function that takes in two strings from letters a to z. return a new sorted strinf, the longest possible containing ditcinct letters, each one only once
+/*
+a = "xyaabbbccccdefww"
+b = "xxxxyyyyabklmopq"
+longest(a, b) -> "abcdefklmopqwxy"
+ */
+
+// const longest = (s1,s2)=> s1.concat(s2)
+// .split("")
+// .sort()
+// .filter((item,pos,self)=>self.indexOf(item)==pos)
+// .join("")
+// function longest(s1,s2){
+//   return (s1+s2).split("").sort().filter((a,b,c)=>a!==c[b-1]).join("")
+// }
+function longest(s1,s2){
+return [...new Set(s1+s2)].sort().join("")
+}
+console.log(longest('abcdefg',"fghijk"))
