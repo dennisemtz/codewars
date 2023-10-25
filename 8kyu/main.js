@@ -1200,5 +1200,10 @@ The order of the sequence has to stay the same.
 // function square(n){
 //   return Math.pow(n,2)
 // }
-const square = n=> Math.pow(n,2)
-console.log(square(3))
+// const square = n=> Math.pow(n,2)
+// console.log(square(3))
+
+//DEBUG SAYHELLO
+//fix the code to greet everyone
+
+const sayHello = name=> `Hello, ${name}`
