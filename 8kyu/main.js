@@ -1189,7 +1189,16 @@ The order of the sequence has to stay the same.
 //   let num = inputString.split(" ")[0]
 //   return parseFloat(num)
 // }
-function getAge(inputString){
-  return +inputString[0]
-}
-console.log(getAge("4 years old"))
+// function getAge(inputString){
+//   return +inputString[0]
+// }
+// console.log(getAge("4 years old"))
+
+//SQUARING THE ARGUMENT
+//write a function that takes in a number and squares it,return the result
+
+// function square(n){
+//   return Math.pow(n,2)
+// }
+const square = n=> Math.pow(n,2)
+console.log(square(3))
