@@ -794,7 +794,22 @@ longest(a, b) -> "abcdefklmopqwxy"
 //ONES AND ZEROES
 //given an array of any length containing ones and zeroes, return the binary value to an integer
 
-function binaryArrayToNumber(arr){
-    return parseInt(arr.join(""),2)
-}
-console.log(binaryArrayToNumber([0,0,1,0]))
+// function binaryArrayToNumber(arr){
+//     return parseInt(arr.join(""),2)
+// }
+// console.log(binaryArrayToNumber([0,0,1,0]))
+
+//ODD OR EVEN
+//given a list of integers, determine whether the sum of its elements is odd or even, return result as a string. if the list is emppty, consider it as a [0]
+
+// function oddOrEven(array){
+//     let sum =array.reduce((prev,curr)=>prev+curr,0)
+//     if(sum%2===0||array===[0]){
+//         return "even"
+//     }else{
+//         return "odd"
+//     }
+// }
+
+const oddOrEven=arr=>{return arr.reduce((a,b)=>a+b,0)%2?"odd":"even"}
+console.log(oddOrEven([0]))
