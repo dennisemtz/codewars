@@ -1206,4 +1206,12 @@ The order of the sequence has to stay the same.
 //DEBUG SAYHELLO
 //fix the code to greet everyone
 
-const sayHello = name=> `Hello, ${name}`
+// const sayHello = name=> `Hello, ${name}`
+
+//TERMINAL GAME MOVE FUNCTION
+//create a gamefunction that takes in two parameters, the first one is the players starting point, the second parameter is the number of moves it must make, twice. return the spot the player landed on 
+
+function move(position,roll){
+  return roll*2 +position
+}
+console.log(move(3,6))
