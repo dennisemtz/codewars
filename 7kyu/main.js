@@ -786,7 +786,15 @@ longest(a, b) -> "abcdefklmopqwxy"
 // function longest(s1,s2){
 //   return (s1+s2).split("").sort().filter((a,b,c)=>a!==c[b-1]).join("")
 // }
-function longest(s1,s2){
-return [...new Set(s1+s2)].sort().join("")
+// function longest(s1,s2){
+// return [...new Set(s1+s2)].sort().join("")
+// }
+// console.log(longest('abcdefg',"fghijk"))
+
+//ONES AND ZEROES
+//given an array of any length containing ones and zeroes, return the binary value to an integer
+
+function binaryArrayToNumber(arr){
+    return parseInt(arr.join(""),2)
 }
-console.log(longest('abcdefg',"fghijk"))
+console.log(binaryArrayToNumber([0,0,1,0]))
