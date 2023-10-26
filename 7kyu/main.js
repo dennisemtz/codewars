@@ -811,5 +811,13 @@ longest(a, b) -> "abcdefklmopqwxy"
 //     }
 // }
 
-const oddOrEven=arr=>{return arr.reduce((a,b)=>a+b,0)%2?"odd":"even"}
-console.log(oddOrEven([0]))
+// const oddOrEven=arr=>{return arr.reduce((a,b)=>a+b,0)%2?"odd":"even"}
+// console.log(oddOrEven([0]))
+
+//THE HIGHEST PROFIT WINS
+//write a function that returns both the minimum and the maximim number of the given array, if there is only one item in the array,return for both.
+
+function minMax(arr){
+    return [Math.min(...arr),Math.max(...arr)]
+}
+console.log(minMax([4,2]))
