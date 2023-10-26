@@ -817,7 +817,29 @@ longest(a, b) -> "abcdefklmopqwxy"
 //THE HIGHEST PROFIT WINS
 //write a function that returns both the minimum and the maximim number of the given array, if there is only one item in the array,return for both.
 
-function minMax(arr){
-    return [Math.min(...arr),Math.max(...arr)]
+// function minMax(arr){
+//     return [Math.min(...arr),Math.max(...arr)]
+// }
+// console.log(minMax([4,2]))
+
+//REMOVE THE MINIMUM
+//given an array of numbers, remove the smallest value and return the rest of the array. do not mutate the original array, if there is multiple elements of the same value, remove the one with the lower index, if the array is empty,return an empty array
+
+// function removeSmallest(numbers){
+//    numbers= numbers.slice(0)//creates a copy of the array
+//    let min = Math.min(...numbers)//sets variable for the min 
+//    numbers.splice(numbers.indexOf(min),1)//indexof searched the array for the min, and removes that single item,->slice(1)
+//    return numbers//return array
+// }
+
+// function removeSmallest(numbers){
+//     let indexOfMin = numbers.indexOf(Math.min(...numbers))//sets variable for the min
+//     return [...numbers.slice(0,indexOfMin),...numbers.slice(indexOfMin+1)]//returns an array starting from the begining until the min, continues from copying the array, without the min
+// }
+
+function removeSmallest(numbers){
+    return numbers.filter((n,i)=>{//got through each item of the array
+        return i!==numbers.indexOf(Math.min(...numbers))//return the numbers that are not the min of the array
+    })
 }
-console.log(minMax([4,2]))
+console.log(removeSmallest([1,2,3,4,5]))
