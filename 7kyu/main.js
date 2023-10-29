@@ -847,9 +847,25 @@ longest(a, b) -> "abcdefklmopqwxy"
 //SORT ARRAY BY STRING LENGTH 
 //given an array, return a new array sorted from the shortest to longest string.
 
-function sortByLength(array){
-   return array.sort((a,b)=>{
-    return a.length-b.length
-   })
+// function sortByLength(array){
+//    return array.sort((a,b)=>{
+//     return a.length-b.length
+//    })
+// }
+// console.log(sortByLength(["beg","life","i","to"]))
+
+//DON'T GIVE ME FIVE
+//given a start and end of a region, return the count of all the numbers EXCEPT numbers with 5 in it. both the start and the end are inclusive
+
+function dontGiveMeFive(start,end){
+    let nums=[]
+    for(let i = start;i<=end;i++){
+       if(!i.toString().includes('5')){
+        nums.push(i)
+       }
+      
+    }
+    return nums.length
 }
-console.log(sortByLength(["beg","life","i","to"]))
+console.log(dontGiveMeFive(4,17))
+
