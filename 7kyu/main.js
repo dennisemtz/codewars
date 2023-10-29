@@ -837,9 +837,19 @@ longest(a, b) -> "abcdefklmopqwxy"
 //     return [...numbers.slice(0,indexOfMin),...numbers.slice(indexOfMin+1)]//returns an array starting from the begining until the min, continues from copying the array, without the min
 // }
 
-function removeSmallest(numbers){
-    return numbers.filter((n,i)=>{//got through each item of the array
-        return i!==numbers.indexOf(Math.min(...numbers))//return the numbers that are not the min of the array
-    })
+// function removeSmallest(numbers){
+//     return numbers.filter((n,i)=>{//got through each item of the array
+//         return i!==numbers.indexOf(Math.min(...numbers))//return the numbers that are not the min of the array
+//     })
+// }
+// console.log(removeSmallest([1,2,3,4,5]))
+
+//SORT ARRAY BY STRING LENGTH 
+//given an array, return a new array sorted from the shortest to longest string.
+
+function sortByLength(array){
+   return array.sort((a,b)=>{
+    return a.length-b.length
+   })
 }
-console.log(removeSmallest([1,2,3,4,5]))
+console.log(sortByLength(["beg","life","i","to"]))
