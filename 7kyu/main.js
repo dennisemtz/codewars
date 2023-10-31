@@ -857,15 +857,40 @@ longest(a, b) -> "abcdefklmopqwxy"
 //DON'T GIVE ME FIVE
 //given a start and end of a region, return the count of all the numbers EXCEPT numbers with 5 in it. both the start and the end are inclusive
 
-function dontGiveMeFive(start,end){
-    let nums=[]
-    for(let i = start;i<=end;i++){
-       if(!i.toString().includes('5')){
-        nums.push(i)
-       }
+// function dontGiveMeFive(start,end){
+//     let nums=[]
+//     for(let i = start;i<=end;i++){
+//        if(!i.toString().includes('5')){
+//         nums.push(i)
+//        }
       
-    }
-    return nums.length
-}
-console.log(dontGiveMeFive(4,17))
+//     }
+//     return nums.length
+// }
+// console.log(dontGiveMeFive(4,17))
 
+//FIND THE CAPITALS
+//given a single string word as a nargument, return an orderd array containing the lindexes of all capital letter in the string.
+
+// function capitals(word){
+//     let string =[]
+//     let string1 = word.split("")
+//    string1.map((letter,index)=>{
+//          if(letter===letter.toUpperCase()){
+//             string.push(index)
+//         }
+//     })
+//     return string
+   
+// }
+function capitals(word){
+    let string=word.split("")
+    let num = []
+   string.filter((letter,index)=>{
+       if(letter===letter.toUpperCase()){
+        num.push(index)
+       }
+    })
+    return num
+}
+console.log(capitals("CodE"))
