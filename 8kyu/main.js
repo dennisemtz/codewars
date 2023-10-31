@@ -1211,7 +1211,21 @@ The order of the sequence has to stay the same.
 //TERMINAL GAME MOVE FUNCTION
 //create a gamefunction that takes in two parameters, the first one is the players starting point, the second parameter is the number of moves it must make, twice. return the spot the player landed on 
 
-function move(position,roll){
-  return roll*2 +position
+// function move(position,roll){
+//   return roll*2 +position
+// }
+// console.log(move(3,6))
+
+//FIND NUMBERS WHICH ARE DIVISIBLE BY GIVEN NUMBER
+//complete a function that takes two arguments and returns all numbers which are divisible by the given divisor
+
+function divisibleBy(numbers,divisor){
+  let arr = []
+  for(let i = 0;i<numbers.length;i++){
+    if(numbers[i]%divisor===0){
+      arr.push(numbers[i])
+    }
+  }
+  return arr
 }
-console.log(move(3,6))
+console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2))
