@@ -883,14 +883,24 @@ longest(a, b) -> "abcdefklmopqwxy"
 //     return string
    
 // }
-function capitals(word){
-    let string=word.split("")
-    let num = []
-   string.filter((letter,index)=>{
-       if(letter===letter.toUpperCase()){
-        num.push(index)
-       }
-    })
-    return num
+// function capitals(word){
+//     let string=word.split("")
+//     let num = []
+//    string.filter((letter,index)=>{
+//        if(letter===letter.toUpperCase()){
+//         num.push(index)
+//        }
+//     })
+//     return num
+// }
+// console.log(capitals("CodE"))
+
+//FIND THE DUPLICATED NUMBER IN A CONSECUTIVE UNSORTED LIST
+//given an unsorted consecutive array, return the duplicated integer. if it is not consecutive integers,it is an invalid array.
+
+function findDup(arr){
+    let sorted=arr.sort((a,b)=>a-b)
+    return sorted.filter((item,index)=> sorted.indexOf(item)!==index)[0]
+   
 }
-console.log(capitals("CodE"))
+console.log(findDup([ 1, 2, 2, 3 ]))
