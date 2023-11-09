@@ -908,10 +908,52 @@ longest(a, b) -> "abcdefklmopqwxy"
 //SORTED UNION
 //write a function that takes one or more arrats and return a new arry of unique values in the order of the original provided arrays 
 
-function uniteUnique(...lsts) {
-    let args = [].concat(...lsts);
-    // return args.filter((arg, i) =>args.indexOf(arg) == i);
-    return args.filter((arg,i)=>args.indexOf(arg)==i)
- }
+// function uniteUnique(...lsts) {
+//     let args = [].concat(...lsts);
+//     // return args.filter((arg, i) =>args.indexOf(arg) == i);
+//     return args.filter((arg,i)=>args.indexOf(arg)==i)
+//  }
  
-console.log(uniteUnique([1, 2], [3, 4]))
+// console.log(uniteUnique([1, 2], [3, 4]))
+
+// function uniteUnique(...arr){
+//    let arrs = [].concat(...arr)
+//    let result =[]
+//    for(let i = 0;i<arrs.length;i++){
+//     if(!result.includes(arrs[i])){
+//         result.push(arrs[i])
+//     }
+//    }
+//    return result
+// }
+
+// function uniteUnique(...rest){
+//     return [...new Set(rest.flat())]
+// }
+// console.log(uniteUnique([1, 2], [3, 4]))
+
+//ALphabetical Squence
+//given a random string of letters, return them as a string of comma-seperated sequences sorted alphabeticallys, with each sequence starting with an uppercase chacater and multipled by the alpha position
+
+function alphaSeq(str){
+  
+    //sorted arr
+   let arr =  str.split("").sort()
+   let result = ''
+   for(let i =0;i<arr.length;i++){
+    for(let j=0;j<arr[i].charCodeAt()-'a'.charCodeAt()+1;j++){
+        if(j==0){
+            result+=arr[i].toUpperCase()
+        }else{
+            result+=arr[i]
+        }
+
+    }
+    if(i!=arr.length-1){
+        result +=','
+    }
+   }
+  
+return result
+}
+console.log(alphaSeq('xirtbi'))
