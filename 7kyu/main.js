@@ -898,9 +898,20 @@ longest(a, b) -> "abcdefklmopqwxy"
 //FIND THE DUPLICATED NUMBER IN A CONSECUTIVE UNSORTED LIST
 //given an unsorted consecutive array, return the duplicated integer. if it is not consecutive integers,it is an invalid array.
 
-function findDup(arr){
-    let sorted=arr.sort((a,b)=>a-b)
-    return sorted.filter((item,index)=> sorted.indexOf(item)!==index)[0]
+// function findDup(arr){
+//     let sorted=arr.sort((a,b)=>a-b)
+//     return sorted.filter((item,index)=> sorted.indexOf(item)!==index)[0]
    
-}
-console.log(findDup([ 1, 2, 2, 3 ]))
+// }
+// console.log(findDup([ 1, 2, 2, 3 ]))
+
+//SORTED UNION
+//write a function that takes one or more arrats and return a new arry of unique values in the order of the original provided arrays 
+
+function uniteUnique(...lsts) {
+    let args = [].concat(...lsts);
+    // return args.filter((arg, i) =>args.indexOf(arg) == i);
+    return args.filter((arg,i)=>args.indexOf(arg)==i)
+ }
+ 
+console.log(uniteUnique([1, 2], [3, 4]))
