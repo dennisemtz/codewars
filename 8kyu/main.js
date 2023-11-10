@@ -1237,7 +1237,19 @@ The order of the sequence has to stay the same.
 //  let arr3 = arr1.concat(arr2).sort((a,b)=>a-b)
 // return arr3.filter((item,index)=>arr3.indexOf(item)===index)
 // }
-function mergeArray(arr1,arr2){
-    return Array.from(new Set(arr1.concat(arr2).sort((a,b)=>(a-b))))
+// function mergeArray(arr1,arr2){
+//     return Array.from(new Set(arr1.concat(arr2).sort((a,b)=>(a-b))))
+// }
+// console.log(mergeArray([1,2,3,4,5], [5,7,6,8]))
+
+//TO SQUARE ROOT OR NOT TO SQUARE ROOT
+//given an array as an input, return a new array with processing every number of the input-array as a square root or square the number
+
+function squareOrSquareRoot(array){
+    return array.map((x)=>{
+     const r = Math.sqrt(x)
+     return (r%1==0)? r:(x*x)
+        
+    })
 }
-console.log(mergeArray([1,2,3,4,5], [5,7,6,8]))
+console.log(squareOrSquareRoot([4,3,9,7,2,1]))
