@@ -1219,13 +1219,25 @@ The order of the sequence has to stay the same.
 //FIND NUMBERS WHICH ARE DIVISIBLE BY GIVEN NUMBER
 //complete a function that takes two arguments and returns all numbers which are divisible by the given divisor
 
-function divisibleBy(numbers,divisor){
-  let arr = []
-  for(let i = 0;i<numbers.length;i++){
-    if(numbers[i]%divisor===0){
-      arr.push(numbers[i])
-    }
-  }
-  return arr
+// function divisibleBy(numbers,divisor){
+//   let arr = []
+//   for(let i = 0;i<numbers.length;i++){
+//     if(numbers[i]%divisor===0){
+//       arr.push(numbers[i])
+//     }
+//   }
+//   return arr
+// }
+// console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2))
+
+//MERGE TWO SORTED ARRAYS
+//given two sorted arrays, merge them to create one array. if they both have the same integer,remove the duplicates.if arrays are empty,return an empty array
+
+// function mergeArray(arr1,arr2){
+//  let arr3 = arr1.concat(arr2).sort((a,b)=>a-b)
+// return arr3.filter((item,index)=>arr3.indexOf(item)===index)
+// }
+function mergeArray(arr1,arr2){
+    return Array.from(new Set(arr1.concat(arr2).sort((a,b)=>(a-b))))
 }
-console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2))
+console.log(mergeArray([1,2,3,4,5], [5,7,6,8]))
