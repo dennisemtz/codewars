@@ -1245,11 +1245,20 @@ The order of the sequence has to stay the same.
 //TO SQUARE ROOT OR NOT TO SQUARE ROOT
 //given an array as an input, return a new array with processing every number of the input-array as a square root or square the number
 
-function squareOrSquareRoot(array){
-    return array.map((x)=>{
-     const r = Math.sqrt(x)
-     return (r%1==0)? r:(x*x)
+// function squareOrSquareRoot(array){
+//     return array.map((x)=>{
+//      const r = Math.sqrt(x)
+//      return (r%1==0)? r:(x*x)
         
-    })
+//     })
+// }
+// console.log(squareOrSquareRoot([4,3,9,7,2,1]))
+
+//Merging sorted integer arrays without uplicates
+//write a function that merges two sorted array into a single one, must only contain integer and no duplicates 
+
+function mergeArray(a,b){
+    let arr=a.concat(b).sort((a,b)=>a-b)
+    return arr.filter((item,index)=>arr.indexOf(item)===index)
 }
-console.log(squareOrSquareRoot([4,3,9,7,2,1]))
+console.log(mergeArray([1, 3, 5], [2, 4, 6]))
