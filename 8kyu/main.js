@@ -1361,9 +1361,36 @@ The order of the sequence has to stay the same.
 //SPEEDCODE ARRAY MADNESS
 //given two integer array with length greater than 1, create a program that returns true if the sum of the squares of each element in the array is strictly greater than the sum of the cubes of each element in the second array
 
-function arrayMadness(a,b){
-    let squared = a.reduce((acc,curr)=>acc+Math.pow(curr,2),0)
-    let cubed = b.reduce((acc,curr)=>acc+Math.pow(curr,3),0)
-    return squared>cubed?true:false
+// function arrayMadness(a,b){
+//     let squared = a.reduce((acc,curr)=>acc+Math.pow(curr,2),0)
+//     let cubed = b.reduce((acc,curr)=>acc+Math.pow(curr,3),0)
+//     return squared>cubed?true:false
+// }
+// console.log(arrayMadness([5,6,7],[4,5,6]))
+
+//HOW MANY STAIRS WILL SUZUKI CLIMB IN 20 YEARS
+//given an array of week day with nested array of number of stairs suzuki climed that day, estimate the number of stairs he will have climbed in 20 years
+//20 ys estimate = one year total stairs * 20
+
+function stairsIn20(s){
+    let sum =0
+    for(let i =0;i<=s.length;i++){
+        for(let j=0;j<s[i].length;j++){
+            sum +=s[i][j]
+        }
+    }
+    return sum*20
 }
-console.log(arrayMadness([5,6,7],[4,5,6]))
+function stairsin20(stairs){
+    let total = 0
+    for(value of stairs){
+        for(num of value){
+            total +=num 
+        }
+    }
+    return total *=20
+}
+function stairsin20(a){
+    
+    return 20 * a.reduce((s,a)=>s+a.reduce((s,n)=>s+n,0),0)
+}
