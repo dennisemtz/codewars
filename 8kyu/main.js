@@ -1257,8 +1257,113 @@ The order of the sequence has to stay the same.
 //Merging sorted integer arrays without uplicates
 //write a function that merges two sorted array into a single one, must only contain integer and no duplicates 
 
-function mergeArray(a,b){
-    let arr=a.concat(b).sort((a,b)=>a-b)
-    return arr.filter((item,index)=>arr.indexOf(item)===index)
+// function mergeArray(a,b){
+//     let arr=a.concat(b).sort((a,b)=>a-b)
+//     return arr.filter((item,index)=>arr.indexOf(item)===index)
+// }
+// console.log(mergeArray([1, 3, 5], [2, 4, 6]))
+
+//SUM OF DIFFERENCES IN ARRAY
+//create a function that sums the diff between consecutive pairs in the array in descending order
+//[10, 2, 1] -> (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+// function sumOfDiff(arr){
+//     return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+
+// }
+// console.log(sumOfDiff([10, 2, 1]))
+
+//DUCK DUCK GOOSE
+//given an array of player objects and an index, reutrn the name of the chosen player
+
+// function duckDuckGooe(players,goose){
+//     for(let i =0;i<players.length;i++){
+//         if(i===(goose-1)%players.length){
+//             return players[i]
+//         }
+//     }
+// }
+// console.log(duckDuckGooe(["a", "b", "c", "d"], 1))
+
+//NO LOOPS 2 
+//create a function given an array and an x value, return true or false if the array includes the value x without using a loop.
+
+// function check(a,x){
+//     return a.includes(x)
+// }
+// console.log(check([66,101],66))
+
+//I love you, a little , a lot, passionately ... not at all
+//create a function that returns the last petal and their message 
+/*
+"I love you"
+"a little"
+"a lot"
+"passionately"
+"madly"
+"not at all"
+ */
+
+// function howMuchILoveYou(numP){
+//     let phrase =
+//     {
+//     0: "I love you",
+//     1:"a little",
+//     2:"a lot",
+//     3:"passionately",
+//     4:"madly",
+//     5:"not at all",
+//     }
+//     return phrase[numP%6]
+// }
+// console.log(howMuchILoveYou(6))
+
+//WELL OF IDEAS
+//create a function where you are give an array. if there are one or two "good" strings then return publish,more that two "good"return "i smell a series" if there are no "good" strings return fail
+
+// function well(x){
+//     let arr =[]
+//     if(!x.includes("good")){
+//         return "Fail"
+//     }else{
+//         x.map((item)=>{
+//             if(item ==="good"){
+//                 arr.push(item)
+//             }
+//         })
+       
+//     }
+//   if(arr.length<=2){
+//     return "Publish"
+//   }else{
+//     return " i smell"
+//   }
+// }
+// function well(x){
+//     const count = x.filter(el =>el=="good").length
+//     return count >2?"Ismell a series!":count >0?"Publish":"Fail"
+// }
+// console.log(well(['good', 'good']))
+
+//A WOLF IN SHEEPS CLOTHING
+//create a function where you are given an array with the string of "sheep" and "wolf" if "wolf" is at the end of the array return a string if it is not return another string 
+
+// function warnTheSheep(queue){
+//     if(queue[queue.length -1]==="wolf"){
+//         return "Pls go away and stop eating my sheep"
+//     }else{ 
+//         let loc = queue.reverse().indexOf("wolf")  
+//         return `Oi! Sheep number ${ loc }! You are about to be eaten by a wolf!`
+//     }
+// }
+// console.log(warnTheSheep(["wolf"]))
+
+//SPEEDCODE ARRAY MADNESS
+//given two integer array with length greater than 1, create a program that returns true if the sum of the squares of each element in the array is strictly greater than the sum of the cubes of each element in the second array
+
+function arrayMadness(a,b){
+    let squared = a.reduce((acc,curr)=>acc+Math.pow(curr,2),0)
+    let cubed = b.reduce((acc,curr)=>acc+Math.pow(curr,3),0)
+    return squared>cubed?true:false
 }
-console.log(mergeArray([1, 3, 5], [2, 4, 6]))
+console.log(arrayMadness([5,6,7],[4,5,6]))
