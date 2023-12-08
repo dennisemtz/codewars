@@ -1372,25 +1372,38 @@ The order of the sequence has to stay the same.
 //given an array of week day with nested array of number of stairs suzuki climed that day, estimate the number of stairs he will have climbed in 20 years
 //20 ys estimate = one year total stairs * 20
 
-function stairsIn20(s){
-    let sum =0
-    for(let i =0;i<=s.length;i++){
-        for(let j=0;j<s[i].length;j++){
-            sum +=s[i][j]
-        }
-    }
-    return sum*20
-}
-function stairsin20(stairs){
-    let total = 0
-    for(value of stairs){
-        for(num of value){
-            total +=num 
-        }
-    }
-    return total *=20
-}
-function stairsin20(a){
+// function stairsIn20(s){
+   
+//     for(let i =0,sum=0;i<s.length;i++){
+//         for(let j=0;j<s[i].length;j++){
+//             sum +=s[i][j]
+//         }
+//     }
+//     return sum*20
+// }
+// function stairsin20(stairs){
+//     let total = 0
+//     for(value of stairs){
+//         for(num of value){
+//             total +=num 
+//         }
+//     }
+//     return total *=20
+// }
+// function stairsin20(a){
     
-    return 20 * a.reduce((s,a)=>s+a.reduce((s,n)=>s+n,0),0)
+//     return 20 * a.reduce((s,a)=>s+a.reduce((s,n)=>s+n,0),0)
+// }
+
+//FIND THE DIFF IN AGE
+//given an array of ages, return a new array of youngest age,oldest age, and the diff between the two
+
+function differenceInAges(ages){
+    let arr=[]
+   arr.push(Math.min(...ages))
+   arr.push(Math.max(...ages))
+   arr.push(Math.max(...ages)-Math.min(...ages))
+   return arr
+
 }
+console.log(differenceInAges([82, 15, 6, 38, 35]))
