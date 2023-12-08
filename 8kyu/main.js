@@ -1398,12 +1398,25 @@ The order of the sequence has to stay the same.
 //FIND THE DIFF IN AGE
 //given an array of ages, return a new array of youngest age,oldest age, and the diff between the two
 
-function differenceInAges(ages){
-    let arr=[]
-   arr.push(Math.min(...ages))
-   arr.push(Math.max(...ages))
-   arr.push(Math.max(...ages)-Math.min(...ages))
-   return arr
+// function differenceInAges(ages){
+//     let arr=[]
+//    arr.push(Math.min(...ages))
+//    arr.push(Math.max(...ages))
+//    arr.push(Math.max(...ages)-Math.min(...ages))
+//    return arr
 
+// }
+// console.log(differenceInAges([82, 15, 6, 38, 35]))
+
+//UEFA EURO 2016
+//create a function that takes in a string array for the players and another array of their scores and return a string saying who won
+
+function uefaEuro2016(teams,scores){
+    if(scores[0]>scores[1]){
+        return `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`
+    }else if(scores[1]>scores[0]){
+        return `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
+    }else{
+        return `At match ${teams[0]} - ${teams[1]}, teams played draw.`
+    }
 }
-console.log(differenceInAges([82, 15, 6, 38, 35]))
